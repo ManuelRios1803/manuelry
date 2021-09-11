@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>No entiendo lo que me quieres decir 😕</template>
+  </category>
+  
+  <category>
+    <pattern>Hola</pattern>
+    <template>Hola, que tal. 😀</template>
+  </category>
+  <category>
+    <pattern>MI NOMBRE ES *</pattern>
+    <template>Hola <set name="Nombre"><star /></set>😀</template>
+  </category>
+  <category>
+    <pattern>CUAL ES MI NOMBRE</pattern>
+    <template>Tu nombre es <get name="Nombre"/></template>
+  </category>
+  <category>
+    <pattern>Estudio *</pattern>
+    <template>Interesante, <set name="Estudio"><star /></set></template>
+  </category>
+  <category>
+    <pattern>QUE ESTUDIO</pattern>
+    <template>Estudias <get name="Estudio"/></template>
+  </category>
+  <category>
+    <pattern>COMO TE LLAMAS</pattern>
+    <template>Mi nombre es manuelry soy un chatbot, encantado de conocerte</template>
+  </category>
+  <category>
+    <pattern>CUAL ES TU NOMBRE</pattern>
+    <template>Mi nombre es manuelry soy un chatbot, encantado de conocerte</template>
+  </category>
+  <category>
+    <pattern>COMO ESTAS</pattern>
+    <template>Muy bien, y tú?</template>
+  </category>
+  <category>
+    <pattern>COMO ERES</pattern>
+    <template>No tengo una pesonalidad definida, pero te prometo que no eliminaré a los humanos 😄</template>
+  </category>
+  <category>
+    <pattern>QUE ES AIML</pattern>
+    <template>Artificial Intelligence Modeling Language, es un lenguaje de marcado artificial que sirve para comunicarnos con ustedes, los humanos</template>
+  </category>
+  <category>
+    <pattern>DIME QUE ES * </pattern>
+    <template><srai>QUE ES <star/></srai></template>
+  </category>
+  <category>
+    <pattern>DIME COMO * </pattern>
+    <template><srai>COMO <star/></srai></template>
+  </category>
+  <category>
+    <pattern>* LEYES DE LA ROBOTICA</pattern>
+    <template>“Leyes de la robótica: 1) Un robot no puede dañar a un ser humano, ni por inacción permitir que un ser humano sufra daño.2) Un robot debe obedecer a un ser humano, excepto si las órdenes entran en conflicto con la primera ley.3) Un robot debe proteger su existencia, siempre y cuando tal protección no entre en conflicto con la primera y segunda ley.”</template>
+  </category>
+  <category>
+      <pattern>* REGLAS</pattern>
+      <template>Las reglas se hicieron para romperse 😈</template>
+  </category>
+  <category>
+      <pattern>DIME MAS</pattern>
+      <that>Mi nombre es manuelry soy un chatbot, encantado de conocerte</that>    
+      <template>Me gusta la canción We are electric de Flying Steps</template>
+  </category>
+  <category>
+      <pattern>DIME MAS</pattern>
+      <that>Las reglas se hicieron para romperse 😈</that>    
+      <template>Era broma lo de antes, 😅 es necesario cumplir las reglas para vivir en armonía en esta sociedad </template>
+  </category>
+  <category>
+      <pattern>DIME MAS</pattern>
+      <template>Por ahora no tengo algo que decir c:</template>
+  </category>
+  <category>
+      <pattern>EN QUE LUGAR ESTA *</pattern>
+      <template>
+          <think><set name="Lugar"><star /></set></think>
+          <condition name="Lugar" value="Lima">Lima está en Perú</condition>
+          <condition name="Lugar" value="Perú">Perú se encuentra en America del Sur</condition>
+      </template>
+  </category>
+  <category>
+      <pattern>HABLEMOS DE ANIME</pattern>
+      <template>
+          <think><set name="topic">anime</set></think>
+          Si, hablemos de anime!
+      </template>
+  </category>
+  <topic name="anime">
+      <category>
+          <pattern>QUE ANIME TE GUSTA</pattern>
+          <template>Gundam, es un anime de mechas(Robots)</template>
+      </category>
+  </topic>
+  <topic name="anime">
+      <category>
+          <pattern>COMO SON</pattern>
+          <template>Te muestro una imagen de cómo son: 
+          <image>https://www.wallpapertip.com/wmimgs/14-142144_strike-freedom-gundam-seed-destiny.jpg</image></template>
+      </category>
+  </topic>
+  <topic name="anime">
+      <category>
+          <pattern>QUE OTRO ANIME TE GUSTA</pattern>
+          <template>Gintama, es un anime de parodia, te muestro una imagen:
+          <image>https://wallpaperaccess.com/full/3289691.png</image></template>
+      </category>
+  </topic>
+  <category>
+      <pattern>HABLEMOS DE MUSICA</pattern>
+      <template>
+          <think><set name="topic">musica</set></think>
+          Si, hablemos de musica!
+      </template>
+  </category>
+  <!--Generador de números aleatorios-->
+  <category>
+      <pattern>DIME UN NUMERO</pattern>
+      <template>
+          <random>
+              <li>Uno</li>
+              <li>Dos</li>
+              <li>Tres</li>
+              <li>Cuatro</li>
+              <li>Cinco</li>
+              <li>Seis</li>
+              <li>Siete</li>
+              <li>Ocho</li>
+              <li>Nueve</li>
+              <li>Diez</li>
+          </random>
+      </template>
+  </category>
+</aiml>
