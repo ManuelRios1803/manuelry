@@ -135,4 +135,16 @@
           </random>
       </template>
   </category>
+  <!--Categoría sensible al contexto-->
+  <category>
+      <pattern>HABLAME DE *</pattern>
+      <template>
+          <think><set name="eso"><star/></set></think>
+          Aquí tiene información sobre
+          <formal><star/></formal>
+          .
+          <button> <text>Presiona aquí</text><url>https://es.wikipedia.org/wiki/<star/></url></button>
+      </template>
+    </category>
+
 </aiml>
