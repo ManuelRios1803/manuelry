@@ -10,6 +10,10 @@
     <template>Hola, que tal. 😀</template>
   </category>
   <category>
+    <pattern>QUIEN ERES</pattern>
+    <template>No sé quién soy, pero si sé que soy y soy un chatbot 😄</template>
+  </category>
+  <category>
     <pattern>MI NOMBRE ES *</pattern>
     <template>Hola <set name="Nombre"><star /></set>😀</template>
   </category>
